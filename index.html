@@ -1,0 +1,119 @@
+<!--
+=====================================================
+ First: Questions
+=====================================================
+
+1. What is the difference between placeholder and value?
+   - placeholder: a hint text shown inside an empty input to tell the user
+     what to type ( "Enter your name"). It disappears once the user
+     starts typing, and it is NOT submitted with the form
+   - value: the actual data of the input. It can be a default value set in
+     HTML, or what the user types, and it IS submitted with the form
+
+2. What is the purpose of the required attribute?
+   - It makes a field mandatory. The browser will block form submission and
+     show a message if the field is left empty, so the user must fill it in
+     before sending the form
+
+3. What is the difference between radio and checkbox?
+   - radio: the user can choose ONLY ONE option from a group
+   - checkbox: the user can choose  ONE or MANY options
+-->
+
+<!DOCTYPE html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+
+  <h1>Registration Form</h1>
+<br>
+    <p>
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+    </p>
+    <br>
+
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+    </p>
+    <br>
+
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" minlength="8" required>
+    </p>
+    <br>
+
+  
+    <p>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX">
+    </p>
+    <br>
+
+    
+    <p>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob">
+    </p>
+    <br>
+
+  
+    <p>
+      Gender:
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+    </p>
+    <br>
+
+    
+    <p>
+      Skills:
+      <input type="checkbox" id="html" name="skills" value="html">
+      <label for="html">HTML</label>
+    
+
+      <input type="checkbox" id="css" name="skills" value="css">
+      <label for="css">CSS</label>
+
+      <input type="checkbox" id="js" name="skills" value="javascript">
+      <label for="js">JavaScript</label>
+
+      <input type="checkbox" id="cpp" name="skills" value="cpp">
+      <label for="cpp">C++</label>
+    </p>
+    <br>
+
+    
+    <p>
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">-- Select Country --</option>
+        <option value="egypt">Egypt</option>
+        <option value="saudi">Saudi Arabia</option>
+        <option value="uae">United Arab Emirates</option>
+        <option value="other">Other</option>
+      </select>
+    </p>
+    <br>
+
+    
+    <p>
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" name="image" accept="image/*">
+    </p>
+
+    <p>
+      <button type="submit">Submit</button>
+      <button type="reset">reset</button>
+    </p>
+
+  </form>
+
+</body>
+</html>
